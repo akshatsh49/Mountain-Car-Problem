@@ -9,13 +9,17 @@ An implementation of the mountain car problem from [Reinforcement Learning: An I
 The problem involves a car starting at point (0,0) on a hill of shape y = 1-cos(x). The car must cross over some fixed point by applying throttle which changes the car's tangential velocity. The catch is that the agent can't cross the hill by continuously applying a positive throttle and must learn to gather momentum by oscillating around the starting position.
 
 ## The environment 
-The shape of our hill is y = 1-cos(x) which is different from the book. We choose this as it is easy to calculate the slope of the hill and hence to calculate the tangential retardation caused by gravity. As proof of concept we don't use any function approximation or deep RL techniques and decide to work with a 2D discretized state space. We use tile-coding as described in [Reinforcement Learning: An Introduction](https://web.stanford.edu/class/psych209/Readings/SuttonBartoIPRLBook2ndEd.pdf) Ch 9
+The shape of our hill is y = 1-cos(x) which is different from the book. We choose this as it is easy to calculate the slope of the hill and hence to calculate the tangential retardation caused by gravity. As proof of concept, we don't use any function approximation or deep RL techniques and decide to work with a 2D discretized state space. We use tile-coding as described in [Reinforcement Learning: An Introduction](https://web.stanford.edu/class/psych209/Readings/SuttonBartoIPRLBook2ndEd.pdf) Ch 9
 
 ## The Agent
 The Sarsa algorithm is used.
 
-## Results < ins result >
-Used celluloid and the scatter module from matplotlib.pyplot to get an animation of an episode.
+## Results
+<img src="https://github.com/akshatsh49/Mountain-Car-Problem/blob/master/animate.gif" width='400'>
+If you made it to the end you would have noticed that the task is completed.</br>
+The agent learns to gain momentum around the origin.
+Used celluloid and the scatter module from matplotlib.pyplot to get an animation of the episode.
+
 
 ## Future Work
 The present implementation can be improved upon by implementing the following points
